@@ -1,0 +1,24 @@
+{
+  "extends":[
+    "eslint:recomended",
+    "plugin:react/recomended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "objectLiteralShorthandMethods": true
+    },
+    "env": {
+      "node": true,
+      "es6": true,
+      "browser": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+
+    }
+  }
+}
