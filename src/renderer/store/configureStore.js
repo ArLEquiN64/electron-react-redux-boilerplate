@@ -3,10 +3,10 @@ import thunk from 'redux-thunk';
 import reducer from '../reducers';
 
 const enhancer = compose(
-    applyMiddleware(thunk)
+  applyMiddleware(thunk)
 );
 
 export default function configureStore(initialState) {
-    const store = createStore(reducer, initialState, enhancer);
-    return store;
+  const store = createStore(reducer, initialState, enhancer);
+  return store;
 }

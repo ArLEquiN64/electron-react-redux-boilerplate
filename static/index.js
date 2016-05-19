@@ -1,2 +1,2 @@
-require("babel-register");
-require("../src/renderer/index");
+require('babel-register');
+require('../src/renderer/index');

@@ -9,29 +9,29 @@ const BrowserWindow = electron.BrowserWindow;
 
 let mainWindow;
 
-function createWindow () {
-    mainWindow = new BrowserWindow({width: 800, height: 600});
-    mainWindow.loadURL(`file://${__dirname}/../../static/index.html`);
+function createWindow() {
+  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow.loadURL(`file://${__dirname}/../../static/index.html`);
 
-    if(process.env.NODE_ENV === 'development') {
-        mainWindow.webContents.openDevTools();
-    }
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.webContents.openDevTools();
+  }
 
-    mainWindow.on('closed', () => {
-        mainWindow = null;
-    });
+  mainWindow.on('closed', () => {
+    mainWindow = null;
+  });
 }
 
 app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
-    if (process.platform != 'darwin') {
-        app.quit();
-    }
+  if (process.platform != 'darwin') {
+    app.quit();
+  }
 });
 
 app.on('activate', () => {
-    if(mainWindow === null){
-        createWindow();
-    }
+  if (mainWindow === null) {
+    createWindow();
+  }
 });
