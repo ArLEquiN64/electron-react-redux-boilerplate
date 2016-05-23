@@ -1,8 +1,8 @@
 import {createAction} from 'redux-actions';
 
 // ActionType
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
 
 // Action Creator
 export const increment = createAction(INCREMENT);
