@@ -2,6 +2,11 @@
 # compiled files
 static/css
 
+# coverage output
+coverage
+.nyc_output
+
+
 
 ### Node ###
 # Logs
